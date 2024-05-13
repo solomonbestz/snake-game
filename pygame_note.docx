@@ -1,0 +1,72 @@
+
+HOW GAMES WORK IN GENERAL
+
+A GAME LOOP Draws images and other elements to the screen multiple times per second
+
+1) Get Player Input (You need to know what the player wants to do)
+2) Position elements (in each cycle you need to position elements in position it needs to be drawn)
+3) Draw all the elements
+
+
+Mario Game Example
+
+1) Players presses 'right'
+2) Move Mario 5 pixel right
+3) Draw all graphics (Mario now on a new position)
+
+All of the above would happen in one cycle of the game loop 
+1 cycle = 17 milliseconds
+-> 60 cycles per second
+
+
+Framarate: How many times you want something to run per seconds
+
+Drawing Shapes in Pygame
+(Surfaces and Rectangles!)
+
+Surfaces: Surfaces has two types (Display Surface and Regular Surface)
+
+Display Surface: It is the canvas the entire game is drawn on and There is only 1 display surface and it is displayed by default
+
+Regular Surface: It is a layer that can display graphics, There can be multiple surfaces and it is not displayed by default but instead on the display surface.
+
+
+HOW TO USE SURFACES
+
+1) Create a surface (either import an image, write text, or create an empty space)
+2) Display the surface
+
+
+TWO WAYS TO FILLING A SURFACE WITH COLOR
+
+1) RGB Tuple
+2) Color Object -> pygame.Color(color_name)
+
+
+Rect (Rectangle)
+
+A rectangle that can be used for drawing, placement, movement and collisions
+
+
+
+LOGIC OF THE SNAKE GAME
+
+1) We are creating a grid like display
+2) Some blocks are snake blocks
+
+
+An easy way to store 2d data (Vector2)
+
+Moving The snake
+
+The head is moved to a new block
+
+The block before the head gets the position where the
+head used to be
+
+Each block is moved to the position of the block that used to be before it (this deletes the last block)
+
+THINGS NEEDED TO MAKE THE SNAKE Move
+
+1) We need player Input
+2) We need a timer
